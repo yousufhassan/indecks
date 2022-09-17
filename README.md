@@ -41,4 +41,3 @@ Rafał Wichowski - [@rafalwichowski](https://twitter.com/rafalwichowski) - [hi@r
 Project Link: [https://github.com/rawic/vue-flashcard-app](https://github.com/rawic/vue-flashcard-app)
 
 [app-screenshot]: readme/app-screenshot.jpg
-# htnflashcard

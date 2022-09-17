@@ -44,23 +44,21 @@ export default {
     },
 
     getFrontBack() {
-      let url = "http://localhost:5000/v1/";
-      //passage = this.passage;
-      // Call backend to front and back (Question and Answer)
+      let url = "http://localhost:5000/cards";
+      let front = "SOme front"
+      let back = "Some Back";
       axios.post(url, {
-        passage: this.passage
+        passage: this.passage,
+        front: front,
+        back: back,
       })
       .then(function (response) {
-      this.id = repsonse.date.card_id
-      this.front = response.data.front;
-      this.back = response.data.back;
+        console.log(response);
+      //this.id = repsonse.date.card_id
+      //this.front = response.data.front;
+      //this.back = response.data.back;
       })
       .catch(function (error) {});
-      // Example end of function
-      //let summary = "A common technology for front end development is Vue.js.";
-      //let keyword = "Vue.js";
-      //this.front = summary.replace(keyword, "____");
-      //this.back = summary.replace(keyword, this.underline(keyword));
     },
 
     addCard() {
