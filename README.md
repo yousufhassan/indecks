@@ -22,10 +22,21 @@ Simple flashcard app. My very first project made with Vue.js
 
 ### Installation
 
+# Front End - Requires Yarn
 ```sh
 yarn
 yarn serve
 ```
+
+# Back End - Requires Flask and Python/Python3 to be installed
+```sh
+python3 api.py
+```
+or just
+```sh
+python api.py
+```
+
 ### Built With
 
 - [Vue.js](https://vuejs.org/)
