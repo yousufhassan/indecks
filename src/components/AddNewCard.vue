@@ -43,29 +43,26 @@ export default {
       return "<u>" + word + "</u>";
     },
 
-    getFrontBack() {
+     async getFrontBack() {
       let url = "http://localhost:5000/cards";
-      let front = "SOme front"
-      let back = "Some Back";
-      axios.post(url, {
+      let front, back = ""
+      await axios.post(url, {
         passage: this.passage,
-        front: front,
-        back: back,
       })
       .then(function (response) {
-        console.log(response);
-      //this.id = repsonse.date.card_id
-      //this.front = response.data.front;
-      //this.back = response.data.back;
+        front = response.data.front;
+        back = response.data.back;
       })
       .catch(function (error) {});
+      this.front = front;
+      this.back = back;
     },
 
-    addCard() {
+    async addCard(){
       if (!this.passage) {
         this.error = true;
       } else {
-        this.getFrontBack();
+        await this.getFrontBack();
         const card = {
           id: this.id,
           front: this.front,

@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-
+from main import *
 # configuration
 DEBUG = True
 
@@ -25,11 +25,14 @@ def all_cards():
     response_object = {'status': 'success'}
     if request.method == 'POST':
         post_data = request.get_json()
+        [front, back] = passageToQandA(post_data.get('passage'))
         CARDS.append({
             'passage': post_data.get('passage'),
-            'front': post_data.get('back'),
-            'back': post_data.get('back')
+            'front': front,
+            'back': back
         })
+        response_object['front'] = front
+        response_object['back'] = back
         response_object['message'] = 'Card added!'
     else:
         response_object['cards'] = CARDS
