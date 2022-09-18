@@ -12,6 +12,9 @@
   </p>
 </p>
 
+## Demo
+https://vimeo.com/750922928
+
 ## About Flashcard app
 
 <a align="center" href="https://rawic.github.io/vue-flashcard-app/" rel="nofollow noopener noreferrer" target="blank">
